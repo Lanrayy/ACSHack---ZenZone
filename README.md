@@ -1,4 +1,4 @@
-# ACSHack-enZone
+# ACSHack: ZenZone
 # Repo Description
 The winning solution for Imperial ACS 24Hr Hackathon 2022 sponsored by Google and The Alan Turing Institute.
 
