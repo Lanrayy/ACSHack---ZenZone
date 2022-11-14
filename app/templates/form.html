@@ -1,0 +1,222 @@
+{% extends "base.html" %}
+{% block content %}
+   <div class="form-container">
+  <br>
+  <h1 class="page-title">ZenZone Online Wellness Check</h1>
+  <form class="wellness-form" method="post" name="registerform">
+      {{ form.hidden_tag() }}
+      <p>
+        Name <br>
+       {{ form.name(class="form-control form-control-lg margin-top-lg") }}
+        {% if form.name.errors %}
+        
+              {% for error in form.name.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Age <br>
+       {{ form.age(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.age.errors %}
+        
+              {% for error in form.age.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        How much screen time have you had (on average) over the last 3 days? <br>
+       {{ form.screentime_a(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.screentime_a.errors %}
+        
+              {% for error in form.screentime_a.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Have you compared yourself to another social media user recently? <br>
+       {{ form.influencer_a(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.influencer_a.errors %}
+        
+              {% for error in form.influencer_a.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Do you often use face/body image filters? <br>
+       {{ form.filters_a(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.filters_a.errors %}
+        
+              {% for error in form.filters_a.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Do you like how you look? <br>
+       {{ form.self_image_a(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.self_image_a.errors %}
+        
+              {% for error in form.self_image_a.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Do you have a large number of unread messages? <br>
+       {{ form.messages_a(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.messages_a.errors %}
+        
+              {% for error in form.messages_a.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Do you often use your phone before bed? <br>
+       {{ form.bedtime_a(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.bedtime_a.errors %}
+        
+              {% for error in form.bedtime_a.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Who do you mostly follow on social media? <br>
+       {{ form.following_a(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.following_a.errors %}
+        
+              {% for error in form.following_a.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Has social media influence your product choices recently? <br>
+       {{ form.recommendation_a(class="form-control form-control-lg margin-top-lg") }}
+        {% if form.recommendation_a.errors %}
+        
+              {% for error in form.recommendation_a.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Have you gone outside today? <br>
+       {{ form.outside_b(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.outside_b.errors %}
+        
+              {% for error in form.outside_b.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Have you been eating nutritious food lately?  <br>
+       {{ form.eaten_b(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.eaten_b.errors %}
+        
+              {% for error in form.eaten_b.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Have you participated in any unplugged recreational activities recently ? <br>
+       {{ form.nonline_b(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.nonline_b.errors %}
+        
+              {% for error in form.nonline_b.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Have you exercised lots this week? <br>
+       {{ form.exercise_b(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.exercise_b.errors %}
+        
+              {% for error in form.exercise_b.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        How many hours of sleep do you get per night? <br>
+       {{ form.sleep_b(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.sleep_b.errors %}
+        
+              {% for error in form.sleep_b.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Have you spoken to a friend or loved one recently? <br>
+       {{ form.relationship_c(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.relationship_c.errors %}
+        
+              {% for error in form.relationship_c.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Do you have somebody you can confide your private information? <br>
+       {{ form.confide_c(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.confide_c.errors %}
+        
+              {% for error in form.confide_c.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Do you ever feel judged by those around you? <br>
+       {{ form.judged_c(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.judged_c.errors %}
+        
+              {% for error in form.judged_c.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Do you get stressed easily? <br>
+       {{ form.stress_d(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.stress_d.errors %}
+        
+              {% for error in form.stress_d.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Are you good at concentrating? <br>
+       {{ form.concentrate_d(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.concentrate_d.errors %}
+        
+              {% for error in form.concentrate_d.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p>
+        Do you often feel depressed? <br>
+       {{ form.depress_d(class="form-control form-control-lg margin-top-lg form-select") }}
+        {% if form.depress_d.errors %}
+        
+              {% for error in form.depress_d.errors %}
+                  <span>{{ error }}</span>
+              {% endfor %}
+          {% endif %}
+      </p>
+      <p><input type="submit" class="btn btn-success btn-block col-12 submit-button" value="Submit"></p>
+   
+  </form>
+    </div>
+{% endblock %}
